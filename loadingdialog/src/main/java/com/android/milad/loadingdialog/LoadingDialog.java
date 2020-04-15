@@ -1,4 +1,4 @@
-package com.android.tu.loadingdialog;
+package com.android.milad.loadingdialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -6,8 +6,6 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-
-import java.util.logging.LogRecord;
 
 /**
  * Created by tjy on 2017/6/19.
