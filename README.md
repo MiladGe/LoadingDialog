@@ -1,14 +1,14 @@
 LoadingDialog
 ==
-效果图
+Demo
 --
 ![](https://github.com/gittjy/LoadingDialog/raw/master/demogif/自定义加载Dialog.gif)  
 
 
 
-使用说明
+how to use
 --
-1、项目下的build.gradle添加
+1- add jitpack repository to build.gralde(project level)
 
 ```
 allprojects {
@@ -16,16 +16,16 @@ allprojects {
 			...
 			maven { url 'https://www.jitpack.io' }
 		}
-	}
+	     }
 ```
-2、模块下的build.gradle添加依赖
+2- add library link to build.gradle(app level)
 
 ```
 dependencies {
-	        compile 'com.github.gittjy:LoadingDialog:1.0.2'
-	}
+	        implementation 'com.github.MiladGe:LoadingDialog:v1.0.5'
+	     }
 ```
-3、在代码中使用
+3- Create instance using builder and use like below
 
 ```
 LoadingDailog.Builder loadBuilder=new LoadingDailog.Builder(this)
