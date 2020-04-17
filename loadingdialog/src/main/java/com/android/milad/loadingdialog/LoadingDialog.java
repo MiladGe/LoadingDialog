@@ -2,6 +2,7 @@ package com.android.milad.loadingdialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,7 @@ public class LoadingDialog extends Dialog {
         private boolean isCancelable = false;
         private boolean isCancelOutside = false;
         private int maxWaitTime = 15000;
+        private Typeface typeface;
 
 
         public Builder(Context context) {
@@ -80,6 +82,11 @@ public class LoadingDialog extends Dialog {
             return this;
         }
 
+        public Builder setTypeFace(Typeface typeFace) {
+            this.typeface = typeFace;
+            return this;
+        }
+
         /**
          * 设置是否可以取消
          *
@@ -97,6 +104,10 @@ public class LoadingDialog extends Dialog {
             View view = inflater.inflate(R.layout.dialog_loading, null);
             LoadingDialog loadingDailog = new LoadingDialog(context, R.style.MyDialogStyle);
             TextView msgText = (TextView) view.findViewById(R.id.tipTextView);
+
+            if (typeface != null) {
+                msgText.setTypeface(typeface);
+            }
             if (isShowMessage) {
                 msgText.setText(message);
             } else {
